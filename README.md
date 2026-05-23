@@ -51,20 +51,6 @@ Para acceder desde **otros dispositivos en la misma red**, usa la IP local que m
 
 ## Cómo funciona
 
-### Flujo de conexión
-
-```
-Navegador                        Servidor
-   │                                │
-   │── GET /           ────────────▶│  Sirve el HTML
-   │── WS  /ws         ────────────▶│  Abre WebSocket
-   │── {type: "join", nick: "alice"}▶│  Solicita nombre
-   │◀─ {type: "joined", online: …} ─│  Acepta / rechaza
-   │                                │
-   │── {type: "msg", text: "hola"} ▶│  Envía mensaje
-   │◀─ broadcast a todos ───────────│  Retransmite
-```
-
 ### Seguridad
 
 | Capa | Detalle |
